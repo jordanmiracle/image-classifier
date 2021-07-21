@@ -2,16 +2,16 @@ import React from 'react';
 import Post from './Post';
 
 
-const PostList = () => {
+const PostList = (props) => {
     return (
         <React.Fragment>
             <h1>Post List Here</h1>
-            <Post/>
-            <Post/>
-            <Post/>
+            {props.posts.map(post=>{
+                return <Post post={post}/>
+            })}
         </React.Fragment>
-        
     );
 
 }
 
+export default PostList;

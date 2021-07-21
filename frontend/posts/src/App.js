@@ -5,7 +5,20 @@ import PostList from "./components/PostList/PostList";
 
 class App extends Component {
     state = {
-        text: null
+        posts: [
+            {
+                id: 1,
+                text: 'Hello, World!'   
+            },
+            {
+                id: 2,
+                text: 'Hello, World!'   
+               },
+               {
+                id: 3,
+                text: 'Bye, Bye!'   
+               },
+    ]
     }
 
     render() {
@@ -13,7 +26,7 @@ class App extends Component {
         <div className="App">
           <PostForm/>
           <hr />
-          <PostList/>
+          <PostList posts={this.state.posts}/>
         </div>
         );
     }
